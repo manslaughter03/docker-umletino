@@ -12,4 +12,7 @@ Déploimenet de umletino derrière nginx.
 
 ```bash
 ./run.sh
+
+# Lancé nginx sur un autre port que le 8000
+./run.sh 9000
 ```

@@ -6,7 +6,7 @@ ARCH="$(uname -m)"
 
 DOCKERFILE="Dockerfile"
 
-if [[ $string == *"arm"* ]]; then
+if [[ "$ARCH" =~ "arm" ]]; then
   DOCKERFILE+=".rpi" 
 fi
 

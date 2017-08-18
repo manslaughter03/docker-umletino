@@ -18,6 +18,7 @@ RUN set -ex \
   && UMLET_GWT_VERSION=$(grep 'SNAPSHOT</version>' ./umlet-gwt/pom.xml  | cut -f2 -d">"|cut -f1 -d"<") \
   && cp -R ./umlet-gwt/target/umlet-gwt-$UMLET_GWT_VERSION/baseletgwt /tmp/html/ \
   && wget -O /tmp/html/index.html http://www.umlet.com/umletino/umletino.html \
+  && wget -O /tmp/html/favicon.ico http://www.umlet.com/umletino/favicon.ico \
   && wget -O /tmp/html/umletino.css http://www.umlet.com/umletino/umletino.css
 
 RUN apk del wget git

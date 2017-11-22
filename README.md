@@ -1,18 +1,18 @@
 ## Umletino
 
-Déploimenet de umletino derrière nginx.
+Deploy umletino behind nginx
 
-* Construction image docker
+* Build docker image (gwt-builder and nginx)
 
 ```bash
 ./build.sh
 ```
 
-* Lancement serveur web
+* Run web server
 
 ```bash
 ./run.sh
 
-# Lancé nginx sur un autre port que le 8000
+# run nginx on other port (default: 8000)
 ./run.sh 9000
 ```

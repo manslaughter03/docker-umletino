@@ -27,4 +27,4 @@ FROM nginx:alpine
 
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=builder ./html/ /usr/share/nginx/html/ 
+COPY --from=builder ./tmp/html/ /usr/share/nginx/html/ 

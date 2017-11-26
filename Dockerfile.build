@@ -1,4 +1,4 @@
-FROM openjdk:alpine as builder
+FROM openjdk:alpine
 
 RUN apk update \
   && apk add wget bash git
@@ -23,8 +23,4 @@ RUN set -ex \
 
 RUN apk del wget git
 
-FROM nginx:alpine
-
-COPY ./default.conf /etc/nginx/conf.d/default.conf
-
-COPY --from=builder ./html/ /usr/share/nginx/html/ 
+VOLUME ["/tmp/html"]

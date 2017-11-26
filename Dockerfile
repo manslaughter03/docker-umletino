@@ -23,7 +23,7 @@ RUN set -ex \
 
 RUN apk del wget git
 
-FROM nginx:alpine
+FROM nginx:alpine as release
 
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 
